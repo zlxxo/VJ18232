@@ -32,16 +32,18 @@ public class MainActivity extends AppCompatActivity {
         unosi = new ArrayList<String>();
 
         final ArrayAdapter<String> adapter;
-        adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, unosi);
+        adapter = new ArrayAdapter<String>(this,R.layout.element_liste,R.id.Itemname,unosi);
 
         lista.setAdapter(adapter);
 
         dugme.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                unosi.add(0,tekst.getText().toString());
-                adapter.notifyDataSetChanged();
-                tekst.setText("");
+                if(!tekst.getText().toString().equalsIgnoreCase("")) {
+                    unosi.add(0, tekst.getText().toString());
+                    adapter.notifyDataSetChanged();
+                    tekst.setText("");
+                }
             }
         });
     }
