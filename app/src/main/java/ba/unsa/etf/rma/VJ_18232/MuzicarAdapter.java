@@ -12,9 +12,9 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class MuzicarAdapter extends BaseAdapter {
+public class MuzicarAdapter /*extends BaseAdapter*/ {
 
-    private Activity activity;
+   /* private Activity activity;
     private ArrayList<Muzicar> data=null;
     private static LayoutInflater inflater=null;
     private Resources res;
@@ -89,5 +89,5 @@ public class MuzicarAdapter extends BaseAdapter {
 
         }
         return vi;
-    }
+    }*/
 }
